@@ -3,11 +3,11 @@ def Ereal(Enomial,Eppp):
 
 def Enominal(Cdomestic,Cforeign):
     # the published exchange rate: how much of domestic currency for 1 unit of foreign currency
-    return round(Cdomestic/Cforeign,2)
+    return Cdomestic/Cforeign
 
 def Eppp(Pdomestic,Pforeign):
     # the ratio of domestic price to foreign price
-    return round(Pdomestic/Pforeign,2)
+    return Pdomestic/Pforeign
 
 def valuation():
     domestic_currency = float(input("Domestic Currency: "))
@@ -17,13 +17,13 @@ def valuation():
     nominal = Enominal(domestic_currency,foreign_currency)
     ppp = Eppp(domestic_price,foreign_price)
     real = Ereal(nominal,ppp)
-    percentage = round((real-1)*100,2)
+    percentage = abs(round((real-1)*100))
     if(real > 1):
-        print("Domestic Currency is under-valued. The Foreign Currency is {:.2f}% overvalued relative to the Domestic Currency.".format(percentage))
+        print("The Foreign Currency is {}% overvalued relative to the Domestic Currency.".format(percentage))
     elif(real < 1):
-        print("Domestic Currency is over-valued. The Foreign Currency is {:.2f}% under-valued relative to the Domestic Currency.".format(percentage))
+        print("The Foreign Currency is {}% under-valued relative to the Domestic Currency.".format(percentage))
     else:
-        print("Domestic Currency is correctly valued.")
+        print("The Foreign Currency is neither under-valued nor over-valued relative to the Domestic Currency.")
 
 if __name__ == "__main__":
     valuation()
