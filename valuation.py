@@ -20,15 +20,15 @@ def valuation():
     percentage = abs(round((real-1)*100))
     if(real > 1):
         print("Evaluation: The Foreign Currency is {}% overvalued relative to the Domestic Currency.".format(percentage))
-        print("Interpretation: This indicates a significant deviation from purchasing power parity.")
-        print("Remedy: The domestic currency should be appreciated to bring the exchange rate back into equilibrium.")
+        print("Interpretation: This indicates a significant deviation from Purchasing Power Parity.")
+        print("Remedy: The Domestic Currency should be appreciated to bring the Exchange Rate back into equilibrium.")
     elif(real < 1):
         print("Evaluation: The Foreign Currency is {}% under-valued relative to the Domestic Currency.".format(percentage))
-        print("Interpretation: This indicates a significant deviation from purchasing power parity.")
-        print("Remedy: The domestic currency should be depreciated to bring the exchange rate back into equilibrium.")
+        print("Interpretation: This indicates a significant deviation from Purchasing Power Parity.")
+        print("Remedy: The Domestic Currency should be depreciated to bring the Exchange Rate back into equilibrium.")
     else:
         print("Evaluation: The Foreign Currency is neither under-valued nor over-valued relative to the Domestic Currency.")
-        print("Interpretation: The currency is aligned with its fundamental value as suggested by the purchasing power parity.")
+        print("Interpretation: The Domestic Currency is aligned with its fundamental value as suggested by the Purchasing Power Parity.")
 
 if __name__ == "__main__":
     valuation()
